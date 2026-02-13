@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/interview_prep
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+server:
+  port: 8080
+
+security:
+  jwt:
+    secret: "my-ultra-secure-jwt-secret-key-change-this-in-production-123456"
+    expiration-ms: 86400000
+
+ai:
+  api:
+    url: ""
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
